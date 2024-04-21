@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/image/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/globals.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <title>DevQuest - Slider</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">It's dangerous to go alone! Take this.</h1>
+    </header>
+
+    <aside class="left">
+        <img src="./src/image/flame-icon.gif" class="flame-icon flame-left" alt="flame-left">
+    </aside>
+
+    <main>
+        <div class="main-challenger">
+            <picture class="back-content">
+                <source media="(max-width: 768px)" srcset="./src/image/devquest-small.png">
+                <img src="./src/image/devquest-large.png" alt="back-content">
+            </picture>
+            <picture class="front-content">
+                <source media="(max-width: 768px)" srcset="./src/image/devquest-small.png">
+                <img src="./src/image/devquest-large.png" alt="front-content">
+            </picture>
+        </div>
+        <div class="main-congrats disabled">
+            <img src="./src/image/devquest-square.png" class="logo-devquest" alt="devquest square logo">
+            <p>Congratulations Quester!<br>Now you are not alone!<br>Let's Code!!!</p>
+            <img class="congrats-gif" src="./src/image/cat-typing.gif" alt="cat typing">
+        </div>
+    </main>
+
+    <aside class="right">
+        <img src="./src/image/flame-icon.gif" class="flame-icon flame-right" alt="flame-right">
+    </aside>
+
+    <footer>
+        <div class="actions">
+            <div class="slider">
+                <input type="range" class="control-slider">
+                <img src="./src/image/quester-victory.gif" class="quester-victory disabled" alt="quester-victory">
+            </div>
+            <button class="btn-reset disabled">Reset</button>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="./src/js/script.js"></script>
+</body>
+
+</html>

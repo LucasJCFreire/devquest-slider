@@ -1,0 +1,23 @@
+/*  ==================== Variables ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --color-primary: whitesmoke;
+    --color-secundary: #00EEA2;
+    --color-background: #000000;
+    --color-highlight: #8A35C8;
+
+    --font-primary: "Press Start 2P", system-ui;
+
+    --font-size-base: 1.5rem;
+    --font-size-medium: 2rem;
+    --font-size-large: 3rem;
+}
+
+/*  ==================== Resets ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}

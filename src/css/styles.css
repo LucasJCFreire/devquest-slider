@@ -1,0 +1,203 @@
+/*  ==================== Basic Structure ==================== */
+html {
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+}
+
+body {
+    max-width: 1440px;
+    min-width: 350px;
+    background-color: var(--color-background);
+    background-image: url(../image/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    margin: 0 auto;
+    display: grid;
+    grid: 'header header header'
+        'aside-left main aside-right'
+        'footer footer footer';
+    justify-items: center;
+    align-items: center;
+}
+
+/*  ==================== Header Styles ==================== */
+header {
+    grid-area: header;
+}
+
+header .title {
+    font-size: var(--font-size-large);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px;
+}
+
+/*  ==================== Aside Styles ==================== */
+aside.left {
+    grid-area: aside-left;
+}
+
+aside.right {
+    grid-area: aside-right;
+}
+
+aside .flame-icon {
+    width: 80px;
+}
+
+/*  ==================== Main Styles ==================== */
+main {
+    grid-area: main;
+    height: 600px;
+}
+
+main .main-challenger {
+    width: 556px;
+    height: 556px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    opacity: 0.5;
+    transition: opacity 1.5s ease-in-out;
+}
+
+main picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+main .main-challenger .back-content {
+    height: 100%;
+    width: 100%;
+    ;
+}
+
+main .main-challenger .front-content {
+    height: 70%;
+    width: 70%;
+    overflow: hidden;
+}
+
+main .main-congrats {
+    height: 556px;
+    max-width: 556px;
+    min-width: 306px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+main .main-congrats .logo-devquest {
+    width: 90%;
+}
+
+main .main-congrats p {
+    color: var(--color-secundary);
+    text-align: center;
+    margin: 10px 0;
+    font-size: var(--font-size-base);
+}
+
+main .congrats-gif {
+    width: 100%;
+}
+
+/*  ==================== Footer Styles ==================== */
+footer {
+    grid-area: footer;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+footer .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 110px;
+    width: 556px;
+    position: relative;
+    border-bottom: solid 2px var(--color-secundary);
+}
+
+footer .actions input {
+    height: 108px;
+    width: 556px;
+    background-color: var(--color-background);
+}
+
+input::-moz-range-thumb {
+    width: 75px;
+    height: 108px;
+    background: url('../image/quester-walking.gif') no-repeat center center;
+    background-size: cover;
+    cursor: w-resize;
+    border: none;
+}
+
+footer .actions .btn-reset {
+    margin: 15px 0;
+    cursor: pointer;
+    width: 200px;
+    height: 20px;
+    font-size: var(--font-size-base);
+    color: var(--color-highlight);
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+footer .actions .btn-reset:hover {
+    color: var(--color-primary);
+    background-color: var(--color-highlight);
+}
+
+/*  ==================== "Responsive Design" ==================== */
+@media (max-width: 998px) {
+    header .title {
+        font-size: var(--font-size-medium);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        grid: 'header header header'
+            'main main main'
+            'aside-left footer aside-right';
+    }
+
+    header .title {
+        font-size: var(--font-size-base);
+    }
+
+    aside .flame-icon {
+        width: 45px;
+    }
+
+    main .main-challenger {
+        width: 306px;
+        height: 306px;
+        transform: translateY(50%);
+    }
+
+    footer .actions input,
+    footer .actions {
+        width: 260px;
+    }
+}
+
+.disabled {
+    display: none !important;
+    opacity: 0;
+}
