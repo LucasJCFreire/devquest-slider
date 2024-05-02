@@ -146,6 +146,33 @@ input::-moz-range-thumb {
     border: none;
 }
 
+input[type="range"]::-webkit-slider-thumb {
+    width: 75px;
+    height: 108px;
+    background: url('../image/quester-walking.gif') no-repeat center center;
+    background-size: cover;
+    cursor: w-resize;
+    border: none;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 75px;
+    height: 108px;
+    background: url('../image/quester-walking.gif') no-repeat center center;
+    background-size: cover;
+    cursor: w-resize;
+    border: none;
+}
+
+input[type="range"]::thumb {
+    width: 75px;
+    height: 108px;
+    background: url('../image/quester-walking.gif') no-repeat center center;
+    background-size: cover;
+    cursor: w-resize;
+    border: none;
+}
+
 footer .actions .btn-reset {
     margin: 15px 0;
     cursor: pointer;
