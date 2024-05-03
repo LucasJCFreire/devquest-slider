@@ -135,42 +135,43 @@ footer .actions input {
     height: 108px;
     width: 556px;
     background-color: var(--color-background);
+    -webkit-appearance: none;
 }
 
-input::-moz-range-thumb {
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 75px;
+    height: 108px;
+    border-radius: 0; 
+}
+
+/* Para firefox */
+input[type=range]::-moz-range-thumb {
     width: 75px;
     height: 108px;
     background: url('../image/quester-walking.gif') no-repeat center center;
     background-size: cover;
-    cursor: w-resize;
     border: none;
+    border-radius: 0;
+    cursor: w-resize;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-    width: 75px;
-    height: 108px;
-    background: url('../image/quester-walking.gif') no-repeat center center;
-    background-size: cover;
-    cursor: w-resize;
-    border: none;
-}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background: url('../image/quester-walking.gif') no-repeat center center;
+        background-size: cover;
+        width: 75px;
+        height: 108px;
+        cursor: w-resize;
+        border: none;
+    }
 
-input[type="range"]::-ms-thumb {
-    width: 75px;
-    height: 108px;
-    background: url('../image/quester-walking.gif') no-repeat center center;
-    background-size: cover;
-    cursor: w-resize;
-    border: none;
-}
-
-input[type="range"]::thumb {
-    width: 75px;
-    height: 108px;
-    background: url('../image/quester-walking.gif') no-repeat center center;
-    background-size: cover;
-    cursor: w-resize;
-    border: none;
+    input[type=range]::-webkit-slider-runnable-track {
+        height: 108px;
+        width: 556px;
+        border-radius: 5px;
+    }
 }
 
 footer .actions .btn-reset {
